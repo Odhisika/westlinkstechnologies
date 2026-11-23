@@ -21,6 +21,7 @@ import {
   CONTACT_ENDPOINT,
   CONTACT_PHONE,
   CONTACT_PHONE_DISPLAY,
+  SITE_URL,
   SOCIALS,
 } from '@/lib/site';
 
@@ -84,7 +85,7 @@ export default function Contact() {
       const res = await fetch(CONTACT_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ ...form, source: 'westlinks.tech' }),
+        body: JSON.stringify({ ...form, source: SITE_URL }),
       });
       if (!res.ok) throw new Error(String(res.status));
       setStatus('sent');

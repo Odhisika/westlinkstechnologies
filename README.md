@@ -1,6 +1,6 @@
 # WestLinks — Next.js Site
 
-A statically-exported Next.js (App Router) site for westlinks.tech, ready to deploy to Cloudflare Pages.
+A statically-exported Next.js (App Router) site for westlinkstechnologies.com, ready to deploy to Cloudflare Pages.
 
 ## Pages
 - `/` — Home (hero, capabilities, products, case studies, industries, values, stats, timeline, blog preview, contact, CTA)
@@ -57,7 +57,7 @@ This outputs a fully static site to `out/` (via `output: 'export'` in `next.conf
 5. Build output directory: `out`
 6. Add the environment variables from `.env.example` in the Cloudflare Pages build settings.
 7. Set `NEXT_PUBLIC_SITE_URL` to your final Pages or custom domain URL, then rebuild.
-8. Add your custom domain (for example `westlinks.tech`) once DNS is ready.
+8. Add your custom domain `westlinkstechnologies.com` in the Cloudflare Pages project once DNS is ready.
 
 ### Deploy from your machine with Wrangler
 ```bash

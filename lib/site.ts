@@ -5,7 +5,7 @@
  * project is statically exported. See `.env.example` for the full list.
  */
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://westlinks.tech'
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://westlinkstechnologies.com'
 ).replace(/\/$/, '');
 
 export const CONTACT_EMAIL =
