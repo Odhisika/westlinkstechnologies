@@ -25,7 +25,7 @@ import {
   SOCIALS,
 } from '@/lib/site';
 
-const budgets = ['$10k – $20k', '$20k – $40k', '$40k – $80k', '$80k+', 'Not sure yet'];
+const budgets = ['Under $10k', '$10k – $25k', '$25k – $50k', '$50k+', 'Not sure yet'];
 const services = ['Full product build', 'Mobile app', 'Web platform', 'Branding & design', 'Consulting / audit'];
 
 export default function Contact() {

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { FiCompass, FiTool, FiUsers, FiCheckCircle, FiArrowRight } from 'react-icons/fi';
+import { FiCheckCircle, FiArrowRight } from 'react-icons/fi';
 import { RiCompassDiscoverLine, RiHammerLine, RiTeamLine } from 'react-icons/ri';
 import Link from 'next/link';
 import RevealOnScroll from '@/components/ui/RevealOnScroll';
@@ -7,59 +7,59 @@ import CTA from '@/components/sections/CTA';
 import PageHero from '@/components/PageHero';
 
 export const metadata: Metadata = {
-  title: 'Engagement Models - WestLinks',
+  title: 'Pricing & Engagement Models - WestLinks',
   description:
-    'Three ways to work with WestLinks: discovery sprints, full product builds, and embedded technologies teams. Transparent scope, phased delivery.',
+    'Clear, fixed-scope pricing for discovery sprints, full product builds, and embedded engineering teams. Indicative USD starting ranges with milestone-based billing.',
 };
 
 const models = [
   {
     icon: RiCompassDiscoverLine,
-    name: 'Architecture Sprint',
-    price: '$8k – $15k',
-    unit: 'Fixed scope · 2–4 weeks',
-    tagline: 'De-risk technical complexity and constraints before committing capital.',
+    name: 'Discovery & Architecture Sprint',
+    price: '$3k – $6k',
+    unit: 'Fixed scope · 2–3 weeks',
+    tagline: 'A short engagement that turns your idea into a clear technical plan you can act on.',
     iconColor: 'text-gold-600',
     features: [
-      'Institutional technical architecture blueprint',
-      'Phased roadmap with cost & latency bounds per phase',
-      'Throughput, custody & security constraint audit',
-      'Interactive prototype or proof-of-concept',
-      'Full IP ownership - yours to keep regardless',
+      'Technical discovery session with your team',
+      'System architecture blueprint and diagrams',
+      'Prioritised build roadmap with rough cost and timeline estimates',
+      'Working proof-of-concept for the riskiest part',
+      'Documented recommendations you own outright',
     ],
-    cta: 'Start an Architecture Sprint',
+    cta: 'Start a Discovery Sprint',
     featured: false,
   },
   {
     icon: RiHammerLine,
     name: 'Full Product Build',
-    price: '$40k – $120k+',
-    unit: 'Phased milestone delivery',
-    tagline: 'From system architecture to shipped production software, end-to-end.',
+    price: '$20k – $60k',
+    unit: 'Phased delivery · Milestone payments',
+    tagline: 'Design, build and launch a production-ready web or mobile product in reviewable phases.',
     iconColor: 'text-gold-600',
     features: [
-      'Web, mobile & high-concurrency microservices',
-      'Schema-level security & compliance audit trails',
-      'Automated CI/CD, observability & IaC by default',
-      'Milestone payments tied directly to verified software',
-      'Guaranteed post-launch SLA & scaling support',
+      'Product scoping, UX design and technical architecture',
+      'Web, mobile and backend development',
+      'Automated tests, CI/CD and deployment setup',
+      'Milestone payments tied to working software you can review',
+      'Handover documentation and optional post-launch support',
     ],
-    cta: 'Scope a Production Build',
+    cta: 'Scope a Product Build',
     featured: true,
   },
   {
     icon: RiTeamLine,
-    name: 'Embedded Technologies Pod',
-    price: 'From $15k/mo',
-    unit: 'Monthly retainer · Rolling',
-    tagline: 'Dedicated senior technologies capacity embedded directly inside your team.',
+    name: 'Embedded Engineering Pod',
+    price: 'From $9k/mo',
+    unit: 'Monthly retainer · 1–2 senior engineers',
+    tagline: 'Senior engineering capacity inside your team, without the cost and delay of hiring full-time.',
     iconColor: 'text-gold-600',
     features: [
-      'Principal engineers embedded in your daily workflow',
-      'Strict technologies bar: peer review, automated tests',
-      'Flexible scale up or down with 30-day notice',
-      'Ideal for incremental legacy modernization',
-      'Structured technical documentation & knowledge transfer',
+      'One or two senior engineers working in your tools and workflow',
+      'Code review, automated tests and clear weekly updates',
+      'Flexible scope — scale up or down with 30 days’ notice',
+      'Knowledge transfer and documentation as standard',
+      'Ideal for legacy modernisation or filling a skills gap',
     ],
     cta: 'Check Pod Availability',
     featured: false,
@@ -68,16 +68,16 @@ const models = [
 
 const principles = [
   {
-    title: 'Fixed discovery, honest builds',
-    body: 'We quote milestones against working, tested software - never arbitrary estimates that inflate halfway through.',
+    title: 'Scope and price agreed upfront',
+    body: 'Every engagement starts with a fixed-price discovery phase. You approve the scope and budget before any build work begins.',
   },
   {
-    title: '100% Client IP Ownership',
-    body: 'All code, infrastructure configs, schemas, and documentation are transferred in full. Zero vendor lock-in.',
+    title: 'You own what we build',
+    body: 'All code, designs, infrastructure configs and documentation are handed over to you at the end of every engagement.',
   },
   {
-    title: 'Principal Engineers Only',
-    body: 'You work directly with the senior specialists architecting your systems. No junior handoffs or account managers.',
+    title: 'Senior engineers throughout',
+    body: 'The engineers who scope your project are the ones who build it. No handoffs to junior teams or account managers.',
   },
 ];
 
@@ -85,9 +85,9 @@ export default function PricingPage() {
   return (
     <>
       <PageHero
-        eyebrow="ENGAGEMENT MODELS"
-        title="Clear scopes. Phased delivery. Zero surprises."
-        subtitle="Every engagement starts with proven architecture - you test working software before committing large capital."
+        eyebrow="PRICING & ENGAGEMENTS"
+        title="Clear scopes. Phased delivery. No surprises."
+        subtitle="Indicative USD starting points for each engagement. We agree a fixed scope and price before any work begins."
       />
 
       <section className="bg-cream py-20">
@@ -104,7 +104,7 @@ export default function PricingPage() {
                 >
                   {m.featured ? (
                     <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-gold px-4 py-1 font-mono text-[11px] font-bold uppercase tracking-wider text-ink shadow-md">
-                      Flagship Model
+                      Most Popular
                     </span>
                   ) : null}
 
@@ -157,6 +157,10 @@ export default function PricingPage() {
               </RevealOnScroll>
             ))}
           </div>
+
+          <p className="mt-8 text-center text-[13px] leading-relaxed text-neutral-500">
+            Prices are indicative USD starting ranges, not quotes. Final scope and a fixed price are agreed during discovery, and build work is billed against milestones you approve.
+          </p>
 
           {/* Guiding Principles */}
           <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
