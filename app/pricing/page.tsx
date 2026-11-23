@@ -9,59 +9,59 @@ import PageHero from '@/components/PageHero';
 export const metadata: Metadata = {
   title: 'Pricing & Engagement Models - WestLinks',
   description:
-    'Clear, fixed-scope pricing for discovery sprints, full product builds, and embedded engineering teams. Indicative USD starting ranges with milestone-based billing.',
+    'Affordable, fixed-scope pricing for discovery sprints, website and web app builds, and dedicated developer retainers. Clear USD starting prices with milestone-based billing.',
 };
 
 const models = [
   {
     icon: RiCompassDiscoverLine,
-    name: 'Discovery & Architecture Sprint',
-    price: '$3k – $6k',
-    unit: 'Fixed scope · 2–3 weeks',
-    tagline: 'A short engagement that turns your idea into a clear technical plan you can act on.',
+    name: 'Discovery & Planning Sprint',
+    price: '$500 – $1,000',
+    unit: 'Fixed scope · 1–2 weeks',
+    tagline: 'A short, low-cost engagement that turns your idea into a clear plan before you spend on a build.',
     iconColor: 'text-gold-600',
     features: [
-      'Technical discovery session with your team',
-      'System architecture blueprint and diagrams',
-      'Prioritised build roadmap with rough cost and timeline estimates',
-      'Working proof-of-concept for the riskiest part',
-      'Documented recommendations you own outright',
+      'Discovery call and requirements review',
+      'Page or app structure with simple wireframes',
+      'Recommended tech stack and build approach',
+      'Realistic cost and timeline estimate',
+      'All notes and documents are yours to keep',
     ],
     cta: 'Start a Discovery Sprint',
     featured: false,
   },
   {
     icon: RiHammerLine,
-    name: 'Full Product Build',
-    price: '$20k – $60k',
+    name: 'Website & Web App Build',
+    price: '$2,000 – $6,000',
     unit: 'Phased delivery · Milestone payments',
-    tagline: 'Design, build and launch a production-ready web or mobile product in reviewable phases.',
+    tagline: 'A production-ready website or web app, built in reviewable phases so you see progress before the final payment.',
     iconColor: 'text-gold-600',
     features: [
-      'Product scoping, UX design and technical architecture',
-      'Web, mobile and backend development',
-      'Automated tests, CI/CD and deployment setup',
-      'Milestone payments tied to working software you can review',
-      'Handover documentation and optional post-launch support',
+      'Responsive design that works on mobile and desktop',
+      'Frontend build plus backend and database where needed',
+      'Testing, deployment and launch support',
+      'Milestone payments tied to work you can review',
+      'Full source code and handover documentation',
     ],
-    cta: 'Scope a Product Build',
+    cta: 'Get a Build Quote',
     featured: true,
   },
   {
     icon: RiTeamLine,
-    name: 'Embedded Engineering Pod',
-    price: 'From $9k/mo',
-    unit: 'Monthly retainer · 1–2 senior engineers',
-    tagline: 'Senior engineering capacity inside your team, without the cost and delay of hiring full-time.',
+    name: 'Dedicated Developer',
+    price: 'From $1,500/mo',
+    unit: 'Monthly retainer · Scale as needed',
+    tagline: 'A dedicated developer working inside your team, without the cost and delay of hiring full-time.',
     iconColor: 'text-gold-600',
     features: [
-      'One or two senior engineers working in your tools and workflow',
-      'Code review, automated tests and clear weekly updates',
-      'Flexible scope — scale up or down with 30 days’ notice',
-      'Knowledge transfer and documentation as standard',
-      'Ideal for legacy modernisation or filling a skills gap',
+      'A developer working in your tools and workflow',
+      'Weekly progress updates and clear priorities',
+      'Code review and testing included',
+      'Flexible scope — adjust or pause with 30 days’ notice',
+      'Documentation and knowledge transfer as standard',
     ],
-    cta: 'Check Pod Availability',
+    cta: 'Check Availability',
     featured: false,
   },
 ];
@@ -69,15 +69,15 @@ const models = [
 const principles = [
   {
     title: 'Scope and price agreed upfront',
-    body: 'Every engagement starts with a fixed-price discovery phase. You approve the scope and budget before any build work begins.',
+    body: 'Every engagement starts with a fixed-price discovery step. You approve the scope and budget before any build work begins.',
   },
   {
     title: 'You own what we build',
-    body: 'All code, designs, infrastructure configs and documentation are handed over to you at the end of every engagement.',
+    body: 'All code, designs and documentation are handed over to you at the end of every engagement. No lock-in.',
   },
   {
-    title: 'Senior engineers throughout',
-    body: 'The engineers who scope your project are the ones who build it. No handoffs to junior teams or account managers.',
+    title: 'Experienced developers',
+    body: 'The developers who scope your project are the ones who build it. No handoffs to junior teams or account managers.',
   },
 ];
 
@@ -86,8 +86,8 @@ export default function PricingPage() {
     <>
       <PageHero
         eyebrow="PRICING & ENGAGEMENTS"
-        title="Clear scopes. Phased delivery. No surprises."
-        subtitle="Indicative USD starting points for each engagement. We agree a fixed scope and price before any work begins."
+        title="Clear scopes. Fair prices. No surprises."
+        subtitle="Straightforward USD starting prices for every engagement. We agree the scope and a fixed price before any work begins."
       />
 
       <section className="bg-cream py-20">
@@ -159,7 +159,7 @@ export default function PricingPage() {
           </div>
 
           <p className="mt-8 text-center text-[13px] leading-relaxed text-neutral-500">
-            Prices are indicative USD starting ranges, not quotes. Final scope and a fixed price are agreed during discovery, and build work is billed against milestones you approve.
+            Prices are USD starting points, not fixed quotes. The final price depends on scope, and build work is billed against milestones you approve.
           </p>
 
           {/* Guiding Principles */}
