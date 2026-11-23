@@ -50,21 +50,24 @@ This outputs a fully static site to `out/` (via `output: 'export'` in `next.conf
 
 ## Deploy to Cloudflare Pages
 ### Git integration (recommended)
-1. Push this project to a GitHub/GitLab repo.
-2. In Cloudflare Pages, create a new project from that repo.
-3. Framework preset: **Next.js (static export)** or **None**.
-4. Build command: `npm run build`
-5. Build output directory: `out`
-6. Add the environment variables from `.env.example` in the Cloudflare Pages build settings.
-7. Set `NEXT_PUBLIC_SITE_URL` to your final Pages or custom domain URL, then rebuild.
-8. Add your custom domain `westlinkstechnologies.com` in the Cloudflare Pages project once DNS is ready.
+> The current `westlinkstechnologies` Pages project was created as a direct-upload project. Pushing to GitHub alone will **not** redeploy it until Git is connected below.
+
+1. Push this project to the GitHub repo.
+2. In Cloudflare Pages, open the `westlinkstechnologies` project → **Settings → Builds & deployments → Connect to Git**.
+3. Select the `Odhisika/westlinkstechnologies` repo and production branch `main`.
+4. Framework preset: **Next.js (static export)** or **None**.
+5. Build command: `npm run build`
+6. Build output directory: `out`
+7. Add the environment variables from `.env.example` in the Cloudflare Pages build settings.
+8. Set `NEXT_PUBLIC_SITE_URL=https://westlinkstechnologies.com`, then save and deploy.
+9. Your custom domain `westlinkstechnologies.com` is already attached and active.
 
 ### Deploy from your machine with Wrangler
 ```bash
 npm install -g wrangler
 wrangler login
 npm run build
-npx wrangler pages deploy out --project-name=westlinks
+npx wrangler pages deploy out --project-name=westlinkstechnologies --branch=main
 ```
 
 Or use the included script:

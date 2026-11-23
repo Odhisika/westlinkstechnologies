@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pages:deploy": "npm run build && npx wrangler pages deploy out --project-name=westlinks"
+    "pages:deploy": "npm run build && npx wrangler pages deploy out --project-name=westlinkstechnologies --branch=main"
   },
   "dependencies": {
     "framer-motion": "^13.1.1",
