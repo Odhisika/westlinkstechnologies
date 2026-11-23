@@ -49,31 +49,34 @@ npm run build
 This outputs a fully static site to `out/` (via `output: 'export'` in `next.config.js`). The folder includes `404.html`, `sitemap.xml`, `robots.txt`, and a `_headers` file with Cloudflare security/cache rules.
 
 ## Deploy to Cloudflare Pages
-### Git integration (recommended)
-> The current `westlinkstechnologies` Pages project was created as a direct-upload project. Pushing to GitHub alone will **not** redeploy it until Git is connected below.
+### Deploy with Wrangler (current method)
+> This is a static export (`output: 'export'` → `out/`), so deploy with `wrangler pages deploy`. Do **not** use `wrangler deploy` — that takes the Workers/OpenNext path, which requires a newer Next.js version and will fail.
 
-1. Push this project to the GitHub repo.
-2. In Cloudflare Pages, open the `westlinkstechnologies` project → **Settings → Builds & deployments → Connect to Git**.
-3. Select the `Odhisika/westlinkstechnologies` repo and production branch `main`.
-4. Framework preset: **Next.js (static export)** or **None**.
-5. Build command: `npm run build`
-6. Build output directory: `out`
-7. Add the environment variables from `.env.example` in the Cloudflare Pages build settings.
-8. Set `NEXT_PUBLIC_SITE_URL=https://westlinkstechnologies.com`, then save and deploy.
-9. Your custom domain `westlinkstechnologies.com` is already attached and active.
+One command builds and uploads the site:
 
-### Deploy from your machine with Wrangler
-```bash
-npm install -g wrangler
-wrangler login
-npm run build
-npx wrangler pages deploy out --project-name=westlinkstechnologies --branch=main
-```
-
-Or use the included script:
 ```bash
 npm run pages:deploy
 ```
+
+This runs `npm run build` and then:
+
+```bash
+npx wrangler pages deploy out --project-name=westlinkstechnologies --branch=main
+```
+
+First-time setup:
+
+```bash
+npm install -g wrangler
+wrangler login
+```
+
+The custom domain `westlinkstechnologies.com` is attached to this Pages project and is already active, so no DNS changes are needed for later deploys.
+
+### Git integration (paused)
+Pushing to GitHub alone does **not** update the live site. The Git build currently auto-detects plain "Next.js" and runs `npx wrangler deploy`, which fails because OpenNext needs Next.js ≥ 15 while this project is Next.js 14 static export.
+
+If you want automatic deploys later, set the framework preset to **Next.js (Static HTML Export)**, build command `npm run build`, output directory `out`, and deploy command `npx wrangler pages deploy out --project-name=westlinkstechnologies --branch=main`. Until then, keep deploying with `npm run pages:deploy`.
 
 ## Structure
 ```
