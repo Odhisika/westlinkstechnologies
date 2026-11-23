@@ -1,0 +1,11 @@
+node_modules
+.next
+.next-dev
+out
+.DS_Store
+*.log
+
+# Local environment and build metadata
+.env
+.env*.local
+*.tsbuildinfo

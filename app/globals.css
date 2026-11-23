@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fbfaf7;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' fill='none'%3E%3Crect x='4' y='5' width='16' height='2.4' rx='1.2' fill='%230A0D10' fill-opacity='0.038'/%3E%3Crect x='4' y='11' width='16' height='2.4' rx='1.2' fill='%230A0D10' fill-opacity='0.038'/%3E%3Crect x='4' y='17' width='16' height='2.4' rx='1.2' fill='%230A0D10' fill-opacity='0.038'/%3E%3Crect x='29' y='4' width='2.4' height='16' rx='1.2' fill='%230A0D10' fill-opacity='0.038'/%3E%3Crect x='35' y='4' width='2.4' height='16' rx='1.2' fill='%230A0D10' fill-opacity='0.038'/%3E%3Crect x='41' y='4' width='2.4' height='16' rx='1.2' fill='%230A0D10' fill-opacity='0.038'/%3E%3Crect x='5' y='28' width='2.4' height='16' rx='1.2' fill='%230A0D10' fill-opacity='0.038'/%3E%3Crect x='11' y='28' width='2.4' height='16' rx='1.2' fill='%230A0D10' fill-opacity='0.038'/%3E%3Crect x='17' y='28' width='2.4' height='16' rx='1.2' fill='%230A0D10' fill-opacity='0.038'/%3E%3Crect x='28' y='29' width='16' height='2.4' rx='1.2' fill='%230A0D10' fill-opacity='0.038'/%3E%3Crect x='28' y='35' width='16' height='2.4' rx='1.2' fill='%230A0D10' fill-opacity='0.038'/%3E%3Crect x='28' y='41' width='16' height='2.4' rx='1.2' fill='%230A0D10' fill-opacity='0.038'/%3E%3C/svg%3E");
+  background-size: 48px 48px;
+  color: #0a0d10;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+::selection {
+  background: #f1b60b;
+  color: #0a0d10;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .perspective-1500 {
+    perspective: 1500px;
+  }
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
+
+/* Subtle architectural lattice pattern */
+.bg-architectural-lattice {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' fill='none'%3E%3Crect x='4' y='5' width='16' height='2.4' rx='1.2' fill='%230A0D10' fill-opacity='0.045'/%3E%3Crect x='4' y='11' width='16' height='2.4' rx='1.2' fill='%230A0D10' fill-opacity='0.045'/%3E%3Crect x='4' y='17' width='16' height='2.4' rx='1.2' fill='%230A0D10' fill-opacity='0.045'/%3E%3Crect x='29' y='4' width='2.4' height='16' rx='1.2' fill='%230A0D10' fill-opacity='0.045'/%3E%3Crect x='35' y='4' width='2.4' height='16' rx='1.2' fill='%230A0D10' fill-opacity='0.045'/%3E%3Crect x='41' y='4' width='2.4' height='16' rx='1.2' fill='%230A0D10' fill-opacity='0.045'/%3E%3Crect x='5' y='28' width='2.4' height='16' rx='1.2' fill='%230A0D10' fill-opacity='0.045'/%3E%3Crect x='11' y='28' width='2.4' height='16' rx='1.2' fill='%230A0D10' fill-opacity='0.045'/%3E%3Crect x='17' y='28' width='2.4' height='16' rx='1.2' fill='%230A0D10' fill-opacity='0.045'/%3E%3Crect x='28' y='29' width='16' height='2.4' rx='1.2' fill='%230A0D10' fill-opacity='0.045'/%3E%3Crect x='28' y='35' width='16' height='2.4' rx='1.2' fill='%230A0D10' fill-opacity='0.045'/%3E%3Crect x='28' y='41' width='16' height='2.4' rx='1.2' fill='%230A0D10' fill-opacity='0.045'/%3E%3C/svg%3E");
+  background-size: 48px 48px;
+}
+
+.bg-topographic {
+  background-image: radial-gradient(rgba(10, 13, 16, 0.05) 1px, transparent 1px),
+    repeating-radial-gradient(circle at 50% 0, transparent 0, transparent 40px, rgba(163, 163, 163, 0.05) 41px, transparent 42px);
+  background-size: 32px 32px, 100% 100%;
+}
+
+.bg-topographic-light {
+  background-image: radial-gradient(rgba(241, 182, 11, 0.06) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* Multi-stop gold mesh gradients */
+.brand-mesh-gradient {
+  background: radial-gradient(at 0% 0%, rgba(241, 182, 11, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(138, 97, 0, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(241, 182, 11, 0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(251, 240, 204, 0.4) 0px, transparent 50%);
+}
+
+.brand-ribbon {
+  background: linear-gradient(135deg, #f3ce4f 0%, #f1b60b 35%, #dba000 70%, #8a6100 100%);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
